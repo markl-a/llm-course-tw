@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🗣️ Large Language Model Course</h1>
+  <h1>🗣️ 大語言模型課程心得</h1>
   <p align="center">
     🐦 <a href="https://twitter.com/maximelabonne">Follow me on X</a> • 
     🤗 <a href="https://huggingface.co/mlabonne">Hugging Face</a> • 
@@ -10,15 +10,15 @@
 </div>
 <br/>
 
-The LLM course is divided into three parts:
+此 LLM 課程心得分成三個部分:
 
-1. 🧩 **LLM Fundamentals** covers essential knowledge about mathematics, Python, and neural networks.
-2. 🧑‍🔬 **The LLM Scientist** focuses on building the best possible LLMs using the latest techniques.
-3. 👷 **The LLM Engineer** focuses on creating LLM-based applications and deploying them.
+1. 🧩 **LLM 基礎** 涵蓋了數學,Python 和神經網路等基礎知識.
+2. 🧑‍🔬 **LLM 模型工程師** 專注在使用最新的技巧,技術搭建現階段個人可實現最好的LLMs.
+3. 👷 **LLM 應用工程師** 專注在創建 LLM 驅動的應用以及部署.
 
 ## 📝 Notebooks
 
-A list of notebooks and articles related to large language models.
+與大型語言模型相關的筆記本和文章清單。
 
 ### Tools
 
