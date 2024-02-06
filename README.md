@@ -56,7 +56,7 @@
 | Merge LLMs with mergekit | 輕鬆創建您自己的模型，無需 GPU！| [Article](https://towardsdatascience.com/merge-large-language-models-with-mergekit-2118fb392b54) | <a href="https://colab.research.google.com/drive/1_JS7JKJAQozD48-LhYdegcuuZ2ddgXfr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 
 
-## 🧩 LLM Fundamentals
+## 🧩 LLM 基礎
 
 ![](img/roadmap_fundamentals.png)
 
