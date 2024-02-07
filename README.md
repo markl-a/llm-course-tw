@@ -112,7 +112,7 @@ Python 是一種強大而靈活的程式語言，由於其可讀性、一致性�
 📚 資源:
 
 - [3Blue1Brown - 什麼是神經網路？](https://www.youtube.com/watch?v=aircAruvnKk): 該影片直觀地解釋了神經網路及其內部運作原理。
-- [freeCodeCamp - 深度學習速成課程](https://www.youtube.com/watch?v=VyWAvY2CF9c): 此影片有效地介紹了深度學習中所有最重要的概念。
+- [freeCodeCamp - 深度學習速成課程](https://www.youtube.com/watch?v=VyWAvY2CF9c): 此影片簡潔地介紹了深度學習中所有最重要的概念。
 - [Fast.ai - 實用深度學習](https://course.fast.ai/): 為具有程式設計經驗、想要了解深度學習的人設計的免費課程。
 - [Patrick Loeber - PyTorch 教學](https://www.youtube.com/playlist?list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4): 為初學者學習 PyTorch 的系列影片。
 
@@ -130,9 +130,9 @@ NLP 是人工智慧的一個令人著迷的分支，它彌合了人類語言和�
 
 - [RealPython - NLP with spaCy in Python](https://realpython.com/natural-language-processing-spacy-python/): 有關 Python 中用於 NLP 任務的 spaCy 函式庫的詳細指南。
 - [Kaggle - NLP Guide](https://www.kaggle.com/learn-guide/natural-language-processing):一些 notebooks 和資源，用於 Python 中 NLP 的實踐解釋。 
-- [Jay Alammar - The Illustration Word2Vec](https://jalammar.github.io/illustrated-word2vec/):了解著名的 Word2Vec 架構的一個好材料。
+- [Jay Alammar - The Illustration Word2Vec](https://jalammar.github.io/illustrated-word2vec/):了解著名 Word2Vec 架構的一個好材料。
 - [Jake Tae - PyTorch RNN from Scratch](https://jaketae.github.io/study/pytorch-rnn/): 在 PyTorch 中實用且簡單地實作 RNN、LSTM 和 GRU 模型。
-- [colah's blog - Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/): 一篇關於 LSTM 網路更具理論性的文章。
+- [colah's blog - Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/): 一篇更理論性的 LSTM 網路文章。
 
 ## 🧑‍🔬 LLM 模型工程
 
@@ -151,66 +151,66 @@ NLP 是人工智慧的一個令人著迷的分支，它彌合了人類語言和�
 
 📚 **參考資料**:
 - [Transformer 插圖](https://jalammar.github.io/illustrated-transformer/) by Jay Alammar: Transformer 模型的直觀解釋。
-- [GPT-2圖解](https://jalammar.github.io/illustrated-gpt2/) by Jay Alammar: 比上一篇文章更重要，它專注於 GPT 架構，與 Llama 非常相似。
-- [LLM Visualization](https://bbycroft.net/llm) by Brendan Bycroft: 以令人難以置信的 3D 視覺化方式呈現 LLM 內部發生的情況。
-* [nanoGPT](https://www.youtube.com/watch?v=kCc8FmEb1nY) by Andrej Karpathy:一段 2 小時長的 YouTube 視頻，用於從頭開始重新實現 GPT（針對程式設計師）。
+- [GPT-2圖解](https://jalammar.github.io/illustrated-gpt2/) by Jay Alammar: 此文比上一篇文章想對更重要些，它專注於和 Llama 非常相似的 GPT 架構。
+- [LLM Visualization](https://bbycroft.net/llm) by Brendan Bycroft: 以 3D 視覺化方式呈現 LLM 內部發生的情況。
+* [nanoGPT](https://www.youtube.com/watch?v=kCc8FmEb1nY) by Andrej Karpathy:一段 2 小時長的 YouTube 影片，用於從頭開始重新實現 GPT（以程式設計師的視角）。
 * [Attention? Attention!](https://lilianweng.github.io/posts/2018-06-24-attention/) by Lilian Weng: 以更正式的方式介紹注意力的必要性。
-* [Decoding Strategies in LLMs](https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html): 提供程式碼和對生成文本的不同解碼策略的直觀介紹。
+* [Decoding Strategies in LLMs](https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html): 提供對生成文本的不同解碼策略的圖像化介紹以及程式碼。
 
 ---
-### 2. 構建一個範例資料集 instruction dataset
+### 2. 構建一個範例(或指令)資料集 instruction dataset
 
-雖然從維基百科和其他網站找到原始資料很容易，但在野外收集成對的指示,範例和答案卻很困難。與傳統機器學習一樣，資料集的品質將直接影響模型的品質，這就是為什麼它可能是微調過程中最重要的組成部分。
+雖然從維基百科和其他網站找到原始資料很容易，但在很多的環境中收集成對的指示,範例和答案卻很困難。與傳統機器學習一樣，資料集的品質將直接影響模型的品質，這就是為什麼它可能是微調過程中最重要的組成部分。
 
 * **[類似 Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)-的資料集**: 使用 OpenAI API (GPT) 從頭開始產生合成資料。您可以指定種子和系統提示來建立多樣化的資料集。
-* **進階技術**: 了解如何使用[Evol-Instruct](https://arxiv.org/abs/2304.12244)改進現有資料集，Evol-Instruct改進現有資料集，如何產生Orca how to generate high-quality synthetic data like in the [Orca](https://arxiv.org/abs/2306.02707) and [phi-1](https://arxiv.org/abs/2306.11644) papers.
-* **Filtering data**: Traditional techniques involving regex, removing near-duplicates, focusing on answers with a high number of tokens, etc.
-* **Prompt templates**: There's no true standard way of formatting instructions and answers, which is why it's important to know about the different chat templates, such as [ChatML](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/chatgpt?tabs=python&pivots=programming-language-chat-ml), [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html), etc.
+* **進階技巧**: 了解如何使用[Evol-Instruct](https://arxiv.org/abs/2304.12244)改進現有資料集，如何產生和[Orca](https://arxiv.org/abs/2306.02707) 和 [phi-1](https://arxiv.org/abs/2306.11644) 論文中類似的高品質合成資料.
+* **資料過濾**: 涉及正規表示式、刪除近似重複項、關注具有大量標記的答案等的傳統技巧.
+* **提示詞模板**: 目前還沒有真正的標準方法來格式來標準化說明範本和答案，這就是為什麼了解不同的聊天範本很重要, 像是 [ChatML](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/chatgpt?tabs=python&pivots=programming-language-chat-ml), [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html) 等.
 
-📚 **References**:
-* [Preparing a Dataset for Instruction tuning](https://wandb.ai/capecape/alpaca_ft/reports/How-to-Fine-Tune-an-LLM-Part-1-Preparing-a-Dataset-for-Instruction-Tuning--Vmlldzo1NTcxNzE2) by Thomas Capelle: Exploration of the Alpaca and Alpaca-GPT4 datasets and how to format them.
-* [Generating a Clinical Instruction Dataset](https://medium.com/mlearning-ai/generating-a-clinical-instruction-dataset-in-portuguese-with-langchain-and-gpt-4-6ee9abfa41ae) by Solano Todeschini: Tutorial on how to create a synthetic instruction dataset using GPT-4. 
-* [GPT 3.5 for news classification](https://medium.com/@kshitiz.sahay26/how-i-created-an-instruction-dataset-using-gpt-3-5-to-fine-tune-llama-2-for-news-classification-ed02fe41c81f) by Kshitiz Sahay: Use GPT 3.5 to create an instruction dataset to fine-tune Llama 2 for news classification.
-* [Dataset creation for fine-tuning LLM](https://colab.research.google.com/drive/1GH8PW9-zAe4cXEZyOIE-T9uHXblIldAg?usp=sharing): Notebook that contains a few techniques to filter a dataset and upload the result.
-* [Chat Template](https://huggingface.co/blog/chat-templates) by Matthew Carrigan: Hugging Face's page about prompt templates
-
----
-### 3. Pre-training models
-
-Pre-training is a very long and costly process, which is why this is not the focus of this course. It's good to have some level of understanding of what happens during pre-training, but hands-on experience is not required.
-
-* **Data pipeline**: Pre-training requires huge datasets (e.g., [Llama 2](https://arxiv.org/abs/2307.09288) was trained on 2 trillion tokens) that need to be filtered, tokenized, and collated with a pre-defined vocabulary.
-* **Causal language modeling**: Learn the difference between causal and masked language modeling, as well as the loss function used in this case. For efficient pre-training, learn more about [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) or [gpt-neox](https://github.com/EleutherAI/gpt-neox).
-* **Scaling laws**: The [scaling laws](https://arxiv.org/pdf/2001.08361.pdf) describe the expected model performance based on the model size, dataset size, and the amount of compute used for training.
-* **High-Performance Computing**: Out of scope here, but more knowledge about HPC is fundamental if you're planning to create your own LLM from scratch (hardware, distributed workload, etc.).
-
-📚 **References**:
-* [LLMDataHub](https://github.com/Zjh-819/LLMDataHub) by Junhao Zhao: Curated list of datasets for pre-training, fine-tuning, and RLHF.
-* [Training a causal language model from scratch](https://huggingface.co/learn/nlp-course/chapter7/6?fw=pt) by Hugging Face: Pre-train a GPT-2 model from scratch using the transformers library.
-* [TinyLlama](https://github.com/jzhang38/TinyLlama) by Zhang et al.: Check this project to get a good understanding of how a Llama model is trained from scratch.
-* [Causal language modeling](https://huggingface.co/docs/transformers/tasks/language_modeling) by Hugging Face: Explain the difference between causal and masked language modeling and how to quickly fine-tune a DistilGPT-2 model.
-* [Chinchilla's wild implications](https://www.lesswrong.com/posts/6Fpvch8RR29qLEWNH/chinchilla-s-wild-implications) by nostalgebraist: Discuss the scaling laws and explain what they mean to LLMs in general.
-* [BLOOM](https://bigscience.notion.site/BLOOM-BigScience-176B-Model-ad073ca07cdf479398d5f95d88e218c4) by BigScience: Notion page that describes how the BLOOM model was built, with a lot of useful information about the engineering part and the problems that were encountered.
-* [OPT-175 Logbook](https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/chronicles/OPT175B_Logbook.pdf) by Meta: Research logs showing what went wrong and what went right. Useful if you're planning to pre-train a very large language model (in this case, 175B parameters).
-* [LLM 360](https://www.llm360.ai/): A framework for open-source LLMs with training and data preparation code, data, metrics, and models.
+📚 **參考資料**:
+* [Preparing a Dataset for Instruction tuning](https://wandb.ai/capecape/alpaca_ft/reports/How-to-Fine-Tune-an-LLM-Part-1-Preparing-a-Dataset-for-Instruction-Tuning--Vmlldzo1NTcxNzE2) by Thomas Capelle: Alpaca 和 Alpaca-GPT4 資料集的探索以及如何標準化資料.
+* [Generating a Clinical Instruction Dataset](https://medium.com/mlearning-ai/generating-a-clinical-instruction-dataset-in-portuguese-with-langchain-and-gpt-4-6ee9abfa41ae) by Solano Todeschini: 有關如何使用 GPT-4 建立綜合指導資料集的教學. 
+* [GPT 3.5 for news classification](https://medium.com/@kshitiz.sahay26/how-i-created-an-instruction-dataset-using-gpt-3-5-to-fine-tune-llama-2-for-news-classification-ed02fe41c81f) by Kshitiz Sahay: 使用 GPT 3.5 建立範例資料集來微調 Llama 2 的新聞分類.
+* [Dataset creation for fine-tuning LLM](https://colab.research.google.com/drive/1GH8PW9-zAe4cXEZyOIE-T9uHXblIldAg?usp=sharing): 包含一些過濾資料集和上傳結果技術的 Notebook .
+* [Chat Template](https://huggingface.co/blog/chat-templates) by Matthew Carrigan: 關於提示模板的 Hugging Face 頁面
 
 ---
-### 4. Supervised Fine-Tuning
+### 3. 預訓練模型
 
-Pre-trained models are only trained on a next-token prediction task, which is why they're not helpful assistants. SFT allows you to tweak them to respond to instructions. Moreover, it allows you to fine-tune your model on any data (private, not seen by GPT-4, etc.) and use it without having to pay for an API like OpenAI's.
+預訓練是一個非常漫長且成本高昂的過程，這就是為什麼這不是本課程的重點。但是對預訓練期間發生的情況有一定程度的了解是很好的。
 
-* **Full fine-tuning**: Full fine-tuning refers to training all the parameters in the model. It is not an efficient technique, but it produces slightly better results.
-* [**LoRA**](https://arxiv.org/abs/2106.09685): A parameter-efficient technique (PEFT) based on low-rank adapters. Instead of training all the parameters, we only train these adapters.
-* [**QLoRA**](https://arxiv.org/abs/2305.14314): Another PEFT based on LoRA, which also quantizes the weights of the model in 4 bits and introduce paged optimizers to manage memory spikes. Combine it with [Unsloth](https://github.com/unslothai/unsloth) to run it efficiently on a free Colab notebook.
-* **[Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl)**: A user-friendly and powerful fine-tuning tool that is used in a lot of state-of-the-art open-source models.
-* [**DeepSpeed**](https://www.deepspeed.ai/): Efficient pre-training and fine-tuning of LLMs for multi-GPU and multi-node settings (implemented in Axolotl).
+* **資料處理流程**: 預訓練需要龐大的資料集 (例如： [Llama 2](https://arxiv.org/abs/2307.09288) 使用 2 兆個tokens進行訓練) ，需要將這些資料集過濾、標記化並與預先定義的詞彙進行整理。
+* **因果語言建模(Causal language modeling)**: 了解因果語言建模和掩碼語言建模(causal and masked language modeling)之間的區別,以及本例中使用的損失函數。更多高效率的預訓練知識可前往 [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) 或[gpt-neox](https://github.com/EleutherAI/gpt-neox)了解。 
+* **縮放的規律**: [縮放的規律](https://arxiv.org/pdf/2001.08361.pdf) 根據模型大小、資料集大小和用於訓練的計算量描述預期的模型性能。
+* **高效能運算**: 這有點超出了本文的範圍，但如果您打算從頭開始創建自己的LLMs(大語言模型)（硬體、分散式工作負載等），那麼更多有關 HPC 的知識是對你而言是必要的。
+  
+📚 **參考資料**:
+* [LLMDataHub](https://github.com/Zjh-819/LLMDataHub) by Junhao Zhao: 用於預訓練、微調和 RLHF 的精選資料集清單。
+* [Training a causal language model from scratch](https://huggingface.co/learn/nlp-course/chapter7/6?fw=pt) by Hugging Face: 使用 Transformers 庫從頭開始預先訓練 GPT-2 模型。
+* [TinyLlama](https://github.com/jzhang38/TinyLlama) by Zhang et al.: 可在此項目很好地了解 Llama 模型是如何從頭開始訓練的。
+* [Causal language modeling](https://huggingface.co/docs/transformers/tasks/language_modeling) by Hugging Face: 解釋因果語言建模和屏蔽語言建模之間的差異以及如何快速微調 DistilGPT-2 模型。
+* [Chinchilla's wild implications](https://www.lesswrong.com/posts/6Fpvch8RR29qLEWNH/chinchilla-s-wild-implications) by nostalgebraist: 討論縮放定律並解釋它們對大語言模型的意義。
+* [BLOOM](https://bigscience.notion.site/BLOOM-BigScience-176B-Model-ad073ca07cdf479398d5f95d88e218c4) by BigScience: 描述如何建立 BLOOM 模型的 Notion 頁面，其中包含大量有關工程部分和遇到問題的有用資訊。
+* [OPT-175 Logbook](https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/chronicles/OPT175B_Logbook.pdf) by Meta: 研究日誌顯示出了什麼錯的以及什麼是正確的。如果您計劃預先訓練非常大的語言模型（在本例中為 175B 參數），則非常有用。
+* [LLM 360](https://www.llm360.ai/): 開源大於言模型框架，包含訓練和資料準備代碼、資料、指標和模型。
 
-📚 **References**:
-* [The Novice's LLM Training Guide](https://rentry.org/llm-training) by Alpin: Overview of the main concepts and parameters to consider when fine-tuning LLMs.
-* [LoRA insights](https://lightning.ai/pages/community/lora-insights/) by Sebastian Raschka: Practical insights about LoRA and how to select the best parameters.
-* [Fine-Tune Your Own Llama 2 Model](https://mlabonne.github.io/blog/posts/Fine_Tune_Your_Own_Llama_2_Model_in_a_Colab_Notebook.html): Hands-on tutorial on how to fine-tune a Llama 2 model using Hugging Face libraries.
-* [Padding Large Language Models](https://towardsdatascience.com/padding-large-language-models-examples-with-llama-2-199fb10df8ff) by Benjamin Marie: Best practices to pad training examples for causal LLMs
-* [A Beginner's Guide to LLM Fine-Tuning](https://mlabonne.github.io/blog/posts/A_Beginners_Guide_to_LLM_Finetuning.html): Tutorial on how to fine-tune a CodeLlama model using Axolotl.
+---
+### 4. 監督微調 (Supervised Fine-Tuning)
+
+預訓練模型僅針對下一個標記(next-token)預測任務進行訓練，這就是為什麼它們不是有用的助手。SFT 允許您調整它們以回應指令。此外，它允許您根據任何資料（私人資料、GPT-4 無法看到的資料等）微調您的模型並使用它，而無需支付 OpenAI 等 API 的費用。
+
+* **全微調**: 全微調是指訓練模型中的所有參數(就是模型訓練)。這不是一種有效的技術，但它會產生稍微好一點的結果.
+* [**LoRA**](https://arxiv.org/abs/2106.09685): 一種基於低階適配器(low-rank adapters)的高效參數微調技術（PEFT）。我們不訓練所有參數，而是只訓練這些適配器(adapters)。
+* [**QLoRA**](https://arxiv.org/abs/2305.14314): 另一個基於 LoRA 的 PEFT，它還將模型的權重量化為 4 bits，並引入分頁優化器來管理記憶體峰值。將其與[Unsloth](https://github.com/unslothai/unsloth)結合使用，可以在免費的 Colab 筆記本上運行。
+* **[Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl)**: 一種用戶友好且功能強大的微調工具，用於許多最先進的開源模型。
+* [**DeepSpeed**](https://www.deepspeed.ai/): 針對多 GPU 和多節點設定的 LLM 的高效預訓練和微調（在 Axolotl 中實現）。
+
+📚 **參考資料**:
+* [The Novice's LLM Training Guide](https://rentry.org/llm-training) by Alpin: 概述微調 LLM 時要考慮的主要概念和參數.
+* [LoRA insights](https://lightning.ai/pages/community/lora-insights/) by Sebastian Raschka: 有關 LoRA 以及如何選擇最佳參數的實用見解.
+* [Fine-Tune Your Own Llama 2 Model](https://mlabonne.github.io/blog/posts/Fine_Tune_Your_Own_Llama_2_Model_in_a_Colab_Notebook.html): 有關如何使用 Hugging Face 庫微調 Llama 2 模型的實作教學.
+* [Padding Large Language Models](https://towardsdatascience.com/padding-large-language-models-examples-with-llama-2-199fb10df8ff) by Benjamin Marie: 為因果LLMs(causal LLMs)填充訓練範例的最佳實踐 
+* [A Beginner's Guide to LLM Fine-Tuning](https://mlabonne.github.io/blog/posts/A_Beginners_Guide_to_LLM_Finetuning.html): 有關如何使用 Axolotl 微調 CodeLlama 模型的教學.
 
 ---
 ### 5. Reinforcement Learning from Human Feedback
