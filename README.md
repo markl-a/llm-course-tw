@@ -213,8 +213,8 @@ NLP 是人工智慧的一個令人著迷的分支，它彌合了人類語言和�
 * [A Beginner's Guide to LLM Fine-Tuning](https://mlabonne.github.io/blog/posts/A_Beginners_Guide_to_LLM_Finetuning.html): 有關如何使用 Axolotl 微調 CodeLlama 模型的教學.
 
 ---
-### 5. Reinforcement Learning from Human Feedback RLHF (根據人類回饋進行強化學習
-)
+### 5. Reinforcement Learning from Human Feedback RLHF (根據人類回饋進行強化學習)
+
 經過監督微調後，RLHF 是用來使 LLM 的答案與人類期望保持一致的一個步驟。這個想法是從人類（或人工）回饋中學習偏好，這可用於減少偏見、審查模型或使它們以更有用的方式行事。它比 SFT 更複雜，並且通常被視為可選項之一。
 
 
