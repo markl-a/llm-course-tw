@@ -248,14 +248,14 @@ NLP 是人工智慧的一個令人著迷的分支，它彌合了人類語言和�
 ---
 ### 7. 量化
 
-Quantization is the process of converting the weights (and activations) of a model using a lower precision. For example, weights stored using 16 bits can be converted into a 4-bit representation. This technique has become increasingly important to reduce the computational and memory costs associated with LLMs.
+量化是將模型的權重（和啟動值）轉換成更低精度表示的過程。例如，原本使用16位元儲存的權重可以轉換成4位元表示。這種技術愈來愈重要，用來減少與大型語言模型（LLMs）相關的計算與記憶體成本。
 
-* **Base techniques**: Learn the different levels of precision (FP32, FP16, INT8, etc.) and how to perform naïve quantization with absmax and zero-point techniques.
-* **GGUF and llama.cpp**: Originally designed to run on CPUs, [llama.cpp](https://github.com/ggerganov/llama.cpp) and the GGUF format have become the most popular tools to run LLMs on consumer-grade hardware.
-* **GPTQ and EXL2**: [GPTQ](https://arxiv.org/abs/2210.17323) and, more specifically, the [EXL2](https://github.com/turboderp/exllamav2) format offer an incredible speed but can only run on GPUs. Models also take a long time to be quantized.
-* **AWQ**: This new format is more accurate than GPTQ (lower perplexity) but uses a lot more VRAM and is not necessarily faster.
+* **基礎技術**: 瞭解不同的精確度層級（FP32、FP16、INT8等）以及如何使用absmax與零點技術(zero-point techniques)進行簡單的量化。
+* **GGUF和llama.cpp**: 最初設計用於在CPU上運行，[llama.cpp](https://github.com/ggerganov/llama.cpp) 和GGUF格式已成為在消費級硬體上運行LLMs的最受歡迎的工具。
+* **GPTQ和EXL2**: [GPTQ](https://arxiv.org/abs/2210.17323) ，特別是 [EXL2](https://github.com/turboderp/exllamav2) ，提供了較快的速度，但只能在GPU上運行。模型量化也需要很長時間。
+* **AWQ**: 這種新格式比GPTQ更準確（困惑度更低），但使用的顯存更多，速度也不一定更快。
 
-📚 **References**:
+📚 **參考文獻**:
 * [Introduction to quantization](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html): Overview of quantization, absmax and zero-point quantization, and LLM.int8() with code.
 * [Quantize Llama models with llama.cpp](https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html): Tutorial on how to quantize a Llama 2 model using llama.cpp and the GGUF format.
 * [4-bit LLM Quantization with GPTQ](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html): Tutorial on how to quantize an LLM using the GPTQ algorithm with AutoGPTQ.
