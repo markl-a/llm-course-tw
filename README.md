@@ -18,7 +18,7 @@
 
 ## 📝 Notebooks
 
-與大型語言模型相關的筆記本和文章清單。
+與大型語言模型相關的 colab notebook 和文章清單。
 
 ### Tools
 
