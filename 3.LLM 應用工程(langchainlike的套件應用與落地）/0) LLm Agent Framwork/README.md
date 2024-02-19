@@ -8,4 +8,7 @@
 5.AutoGpt
 6.AgentGpt
 7.XAgent
+8.anything-llm - https://github.com/Mintplex-Labs/anything-llm
 ---
+https://betterprogramming.pub/frameworks-for-serving-llms-60b7f7b23407
+LLM-Agent-Paper-List - https://github.com/WooooDyy/LLM-Agent-Paper-List
