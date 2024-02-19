@@ -9,9 +9,9 @@
 | 名稱 | 敘述 | 連結 |
 |----------|-------------|----------|
 | 🧐 [LLM AutoEval](https://github.com/mlabonne/llm-autoeval) | 使用 RunPod 自動評估您的LLMs | <a href="https://colab.research.google.com/drive/1Igs3WZuXAIv9X0vwqiE90QlEPys8e8Oa?usp=sharing"><img src="../img/colab.svg" alt="Open In Colab"></a> |
-| 🥱 LazyMergekit | 使用 mergekit 一鍵輕鬆合併模型. | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="../img/colab.svg" alt="Open In Colab"></a> |
-| ⚡ AutoGGUF | 一鍵量化 GGUF 格式的 LLM. | <a href="https://colab.research.google.com/drive/1P646NEg33BZy4BfLDNpTz0V0lwIU3CHu?usp=sharing"><img src="../img/colab.svg" alt="Open In Colab"></a> |
-| 🌳 Model Family Tree | 可視化合併模型的樹狀結構圖. | <a href="https://colab.research.google.com/drive/1s2eQlolcI1VGgDhqWIANfkfKvcKrMyNr?usp=sharing"><img src="../img/colab.svg" alt="Open In Colab"></a> |
+| 🥱 LazyMergekit | 使用 mergekit 一鍵輕鬆合併模型. | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="../../img/colab.svg" alt="Open In Colab"></a> |
+| ⚡ AutoGGUF | 一鍵量化 GGUF 格式的 LLM. | <a href="https://colab.research.google.com/drive/1P646NEg33BZy4BfLDNpTz0V0lwIU3CHu?usp=sharing"><img src="../../img/colab.svg" alt="Open In Colab"></a> |
+| 🌳 Model Family Tree | 可視化合併模型的樹狀結構圖. | <a href="https://colab.research.google.com/drive/1s2eQlolcI1VGgDhqWIANfkfKvcKrMyNr?usp=sharing"><img src="../../img/colab.svg" alt="Open In Colab"></a> |
 
 ### Fine-tuning (微調)
 
