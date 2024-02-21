@@ -52,19 +52,17 @@
 
 * **高階視圖 High-level view**: 重新審視編碼器-解碼器 Transformer 架構，更具體地說，是僅解碼器的 GPT 架構，該架構在每個最近的 LLM 中基本都有使用。
 
-  * [LLM Foundations](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llm-foundations/): 影片搭配教材的講解
+  * [LLM Foundations](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llm-foundations/): 影片搭配教材的講解。
 
-  * [Let's build GPT: from scratch, in code, spelled out.](https://www.youtube.com/watch?v=kCc8FmEb1nY): 影片搭配教材的講解
+  * [Let's build GPT: from scratch, in code, spelled out.](https://www.youtube.com/watch?v=kCc8FmEb1nY): 影片搭配教材的講解。
 
-  * [LLM-from-scratch.ipynb](https://colab.research.google.com/gist/iamaziz/171170dce60d9cd07fab221507fd1d52): 實際簡單版的程式碼
+  * [LLM-from-scratch.ipynb](https://colab.research.google.com/gist/iamaziz/171170dce60d9cd07fab221507fd1d52): 實際簡單版的程式碼。
 
-  * [[1hr Talk] Intro to Large Language Models](https://youtu.be/zjkBMFhNj_g?si=VnNOE1gggtAhxTDn): 影片搭配教材的講解
+  * [[1hr Talk] Intro to Large Language Models](https://youtu.be/zjkBMFhNj_g?si=VnNOE1gggtAhxTDn): 影片搭配教材的講解。
 
 
 * **標記化 Tokenization**: 了解如何將原始文字資料轉換為模型可以理解的格式，這涉及將文字拆分為標記（通常是單字或子單字）。
-
-
-    * [Let's build the GPT Tokenizer](https://youtu.be/zjkBMFhNj_g?si=VnNOE1gggtAhxTDn): 影片搭配教材的講解
+    * [Let's build the GPT Tokenizer](https://youtu.be/zjkBMFhNj_g?si=VnNOE1gggtAhxTDn): 影片搭配教材的講解。
 
 * **注意力機制**: 掌握注意力機制背後的理論，包括自註意力和縮放點積注意力，這使得模型在產生輸出時能夠專注於輸入的不同部分。
 * **文字生成**: 了解模型產生輸出序列的不同方式。常見的策略包括貪婪解碼(greedy decoding)、波束搜尋(beam searc)、top-k 採樣(top-k sampling)和核採樣(nucleus sampling)。
