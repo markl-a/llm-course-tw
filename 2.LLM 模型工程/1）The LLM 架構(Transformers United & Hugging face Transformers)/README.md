@@ -54,6 +54,8 @@
 * **標記化 Tokenization**: 了解如何將原始文字資料轉換為模型可以理解的格式，這涉及將文字拆分為標記（通常是單字或子單字）。
 * **注意力機制**: 掌握注意力機制背後的理論，包括自註意力和縮放點積注意力，這使得模型在產生輸出時能夠專注於輸入的不同部分。
 * **文字生成**: 了解模型產生輸出序列的不同方式。常見的策略包括貪婪解碼(greedy decoding)、波束搜尋(beam searc)、top-k 採樣(top-k sampling)和核採樣(nucleus sampling)。
+- 史丹佛的Transformers課，從架構到應用都有 [CS25: Transformers United V3](https://web.stanford.edu/class/cs25/)
+- Youtube Transformers United 上課錄影[Stanford CS25: V1 I Transformers United: DL Models that have revolutionized NLP, CV, RL](https://www.youtube.com/watch?v=P127jhj-8-Y&list=PLoROMvodv4rNiJRchCzutFw5ItR_Z27CM)
 
 📚 **參考資料**:
 - [Building LLMs from Scratch](https://youtu.be/UU1WVnMk4E8?si=Vn1IbHE5p5LUQmKi) 從零開始 build LLMs。
