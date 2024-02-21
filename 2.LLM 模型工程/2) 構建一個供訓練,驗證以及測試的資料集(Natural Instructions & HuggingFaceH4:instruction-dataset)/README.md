@@ -46,7 +46,8 @@
 雖然從維基百科和其他網站找到原始資料很容易，但在很多的環境中收集成對的指示,範例和答案卻很困難。與傳統機器學習一樣，資料集的品質將直接影響模型的品質，這就是為什麼它可能是微調過程中最重要的組成部分。
 
 * **[類似 Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)-的資料集**: 使用 OpenAI API (GPT) 從頭開始產生合成資料。您可以指定種子和系統提示來建立多樣化的資料集。
-    * 簡單任務的範例:[How I created an instruction dataset using GPT 3.5 to fine-tune Llama 2 for news classification](https://medium.com/@kshitiz.sahay26/how-i-created-an-instruction-dataset-using-gpt-3-5-to-fine-tune-llama-2-for-news-classification-ed02fe41c81f)
+    * 簡單任務的範例1: [How To Create Datasets for Finetuning From Multiple Sources! Improving Finetunes With Embeddings.](https://youtu.be/fYyZiRi6yNE?si=mYgoyAeCMkkKQUr1)   
+    * 簡單任務的範例2: [How I created an instruction dataset using GPT 3.5 to fine-tune Llama 2 for news classification](https://medium.com/@kshitiz.sahay26/how-i-created-an-instruction-dataset-using-gpt-3-5-to-fine-tune-llama-2-for-news-classification-ed02fe41c81f)
 * **進階技巧**: 了解如何使用[Evol-Instruct](https://arxiv.org/abs/2304.12244)改進現有資料集，如何產生和[Orca](https://arxiv.org/abs/2306.02707) 和 [phi-1](https://arxiv.org/abs/2306.11644) 論文中類似的高品質合成資料.
 * **資料過濾**: 涉及正規表示式、刪除近似重複項、關注具有大量標記的答案等的傳統技巧.
 * **提示詞模板**: 目前還沒有真正的標準方法來格式來標準化說明範本和答案，這就是為什麼了解不同的聊天範本很重要, 像是 [ChatML](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/chatgpt?tabs=python&pivots=programming-language-chat-ml), [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html) 等.
