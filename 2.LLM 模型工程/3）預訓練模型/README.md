@@ -40,47 +40,7 @@
 | Merge LLMs with mergekit | 輕鬆創建您自己的模型，無需 GPU！| [Article](https://towardsdatascience.com/merge-large-language-models-with-mergekit-2118fb392b54) | <a href="https://colab.research.google.com/drive/1_JS7JKJAQozD48-LhYdegcuuZ2ddgXfr?usp=sharing"><img src="../img/colab.svg" alt="Open In Colab"></a> |
 
 
-## 🧑‍🔬 LLM 模型工程
 
-本課程的這一部分重點在於學習如何使用最新技術來建立最好的 LLMs。
-
-![](../img/roadmap_scientist.png)
-
-### 1. The LLM 架構
-
-雖然不需要深入了解 Transformer 架構，但深入了解其輸入（tokens 令牌）和輸出（logits）非常重要。普通的注意力機制是另一個需要掌握的關鍵組成部分，稍後會介紹它的改進版本。
-
-* **高階視圖 High-level view**: 重新審視編碼器-解碼器 Transformer 架構，更具體地說，是僅解碼器的 GPT 架構，該架構在每個最近的 LLM 中基本都有使用。
-* **標記化 Tokenization**: 了解如何將原始文字資料轉換為模型可以理解的格式，這涉及將文字拆分為標記（通常是單字或子單字）。
-* **注意力機制**: 掌握注意力機制背後的理論，包括自註意力和縮放點積注意力，這使得模型在產生輸出時能夠專注於輸入的不同部分。
-* **文字生成**: 了解模型產生輸出序列的不同方式。常見的策略包括貪婪解碼(greedy decoding)、波束搜尋(beam searc)、top-k 採樣(top-k sampling)和核採樣(nucleus sampling)。
-
-📚 **參考資料**:
-- [Transformer 插圖](https://jalammar.github.io/illustrated-transformer/) by Jay Alammar: Transformer 模型的直觀解釋。
-- [GPT-2圖解](https://jalammar.github.io/illustrated-gpt2/) by Jay Alammar: 此文比上一篇文章想對更重要些，它專注於和 Llama 非常相似的 GPT 架構。
-- [LLM Visualization](https://bbycroft.net/llm) by Brendan Bycroft: 以 3D 視覺化方式呈現 LLM 內部發生的情況。
-* [nanoGPT](https://www.youtube.com/watch?v=kCc8FmEb1nY) by Andrej Karpathy:一段 2 小時長的 YouTube 影片，用於從頭開始重新實現 GPT（以程式設計師的視角）。
-* [Attention? Attention!](https://lilianweng.github.io/posts/2018-06-24-attention/) by Lilian Weng: 以更正式的方式介紹注意力的必要性。
-* [Decoding Strategies in LLMs](https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html): 提供對生成文本的不同解碼策略的圖像化介紹以及程式碼。
-
----
-### 2. 構建一個範例(或指令)資料集 instruction dataset
-
-雖然從維基百科和其他網站找到原始資料很容易，但在很多的環境中收集成對的指示,範例和答案卻很困難。與傳統機器學習一樣，資料集的品質將直接影響模型的品質，這就是為什麼它可能是微調過程中最重要的組成部分。
-
-* **[類似 Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)-的資料集**: 使用 OpenAI API (GPT) 從頭開始產生合成資料。您可以指定種子和系統提示來建立多樣化的資料集。
-* **進階技巧**: 了解如何使用[Evol-Instruct](https://arxiv.org/abs/2304.12244)改進現有資料集，如何產生和[Orca](https://arxiv.org/abs/2306.02707) 和 [phi-1](https://arxiv.org/abs/2306.11644) 論文中類似的高品質合成資料.
-* **資料過濾**: 涉及正規表示式、刪除近似重複項、關注具有大量標記的答案等的傳統技巧.
-* **提示詞模板**: 目前還沒有真正的標準方法來格式來標準化說明範本和答案，這就是為什麼了解不同的聊天範本很重要, 像是 [ChatML](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/chatgpt?tabs=python&pivots=programming-language-chat-ml), [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html) 等.
-
-📚 **參考資料**:
-* [Preparing a Dataset for Instruction tuning](https://wandb.ai/capecape/alpaca_ft/reports/How-to-Fine-Tune-an-LLM-Part-1-Preparing-a-Dataset-for-Instruction-Tuning--Vmlldzo1NTcxNzE2) by Thomas Capelle: Alpaca 和 Alpaca-GPT4 資料集的探索以及如何標準化資料.
-* [Generating a Clinical Instruction Dataset](https://medium.com/mlearning-ai/generating-a-clinical-instruction-dataset-in-portuguese-with-langchain-and-gpt-4-6ee9abfa41ae) by Solano Todeschini: 有關如何使用 GPT-4 建立綜合指導資料集的教學. 
-* [GPT 3.5 for news classification](https://medium.com/@kshitiz.sahay26/how-i-created-an-instruction-dataset-using-gpt-3-5-to-fine-tune-llama-2-for-news-classification-ed02fe41c81f) by Kshitiz Sahay: 使用 GPT 3.5 建立範例資料集來微調 Llama 2 的新聞分類.
-* [Dataset creation for fine-tuning LLM](https://colab.research.google.com/drive/1GH8PW9-zAe4cXEZyOIE-T9uHXblIldAg?usp=sharing): 包含一些過濾資料集和上傳結果技術的 Notebook .
-* [Chat Template](https://huggingface.co/blog/chat-templates) by Matthew Carrigan: 關於提示模板的 Hugging Face 頁面
-
----
 ### 3. 預訓練模型
 
 預訓練是一個非常漫長且成本高昂的過程，這就是為什麼這不是本課程的重點。但是對預訓練期間發生的情況有一定程度的了解是很好的。
