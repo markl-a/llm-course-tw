@@ -9,9 +9,9 @@
 
 目前是 pytorch 最熱門，但是有些老應用跟google相關的應用仍還是使用tensorflow
 
--[pytorch官網教學](https://pytorch.org/tutorials/beginner/basics/intro.html):建議學習路線:Introduction to PyTorch ->Image and Video ,Audio ,Text 按需學習，只學需要的就好(建議只先選一個)。
+-[pytorch官網教學](https://pytorch.org/tutorials/beginner/basics/intro.html):建議學習路線: Introduction to PyTorch ->Image and Video ,Audio ,Text 按需學習，只學需要的就好(建議只先選一個)。
 
--[tensorflow 官網教學](https://www.tensorflow.org/tutorials?hl=zh-tw): begginner -> Adanced(也是建議按需學習)
+-[tensorflow 官網教學](https://www.tensorflow.org/tutorials?hl=zh-tw): Begginner -> Adanced(也是建議按需學習)
 
 神經網路是許多機器學習模型的基本組成部分，特別是在深度學習領域。為了有效地利用它們，全面了解它們的設計和機制至關重要。
 
