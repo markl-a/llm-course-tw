@@ -69,6 +69,7 @@
 * **文字生成**: 了解模型產生輸出序列的不同方式。常見的策略包括貪婪解碼(greedy decoding)、波束搜尋(beam searc)、top-k 採樣(top-k sampling)和核採樣(nucleus sampling)。
     * [如何生成文本: 通过 Transformers 用不同的解码方法生成文本](https://huggingface.co/blog/zh/how-to-generate)
 
+- [HuggingFace的 Transformer教學](https://huggingface.co/docs/transformers/quicktour):建議以建立應用為目標，從導入,微調,部署整個流程跑一遍。
 - 史丹佛的Transformers課，從架構到應用都有 [CS25: Transformers United V3](https://web.stanford.edu/class/cs25/)
 - Youtube Transformers United 上課錄影[Stanford CS25: V1 I Transformers United: DL Models that have revolutionized NLP, CV, RL](https://www.youtube.com/watch?v=P127jhj-8-Y&list=PLoROMvodv4rNiJRchCzutFw5ItR_Z27CM)
 
