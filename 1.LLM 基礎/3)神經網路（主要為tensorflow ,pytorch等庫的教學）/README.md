@@ -1,11 +1,17 @@
 
 1. 🧩 **LLM 基礎** 涵蓋了數學,Python 和神經網路等基礎知識.
 
-### 3. 神經網絡
+### 3. 神經網絡跟深度學習
 
 
 -[動手深度學習官網](https://zh.d2l.ai/chapter_linear-networks/index.html)
 -[動手深度學習包含 tensorflow,pytorch 程式碼的教學，不過要自己debug](https://zh-v2.d2l.ai/d2l-zh.zip)
+
+目前是 pytorch 最熱門，但是有些老應用跟google相關的應用仍還是使用tensorflow
+
+-[pytorch官網教學](https://pytorch.org/tutorials/beginner/basics/intro.html):建議學習路線:Introduction to PyTorch ->Image and Video ,Audio ,Text 按需學習，只學需要的就好(建議只先選一個)。
+
+-[tensorflow 官網教學](https://www.tensorflow.org/tutorials?hl=zh-tw): begginner -> Adanced(也是建議按需學習)
 
 神經網路是許多機器學習模型的基本組成部分，特別是在深度學習領域。為了有效地利用它們，全面了解它們的設計和機制至關重要。
 
