@@ -18,34 +18,42 @@
 
 ### 1. 運行 LLMs
 
-
 由於硬體要求高，運行大型語言模型可能會有困難。根據您的使用案例，您也可能只想通過API（如GPT-4）簡單地使用模型，或者在本地運行它。無論哪種情況，額外的提示和指導技術都可以改善或限制您的應用程序的輸出。
 
 * **LLM APIs**: APIs是部署LLMs的便捷方式。這個領域分別有私有LLMs ([OpenAI](https://platform.openai.com/), [Google](https://cloud.google.com/vertex-ai/docs/generative-ai/learn/overview), [Anthropic](https://docs.anthropic.com/claude/reference/getting-started-with-the-api), [Cohere](https://docs.cohere.com/docs), 等.) 和開源LLMs ([OpenRouter](https://openrouter.ai/), [Hugging Face](https://huggingface.co/inference-api), [Together AI](https://www.together.ai/), 等.).
-* **開源 LLMs**: [Hugging Face Hub](https://huggingface.co/models) 是尋找LLMs的好地方。 您可以直接在 [Hugging Face Spaces](https://huggingface.co/spaces)中運行一些模型， 或者下載並在像 [LM Studio](https://lmstudio.ai/) 這樣的應用程序中本地運行以及通過CLI使用 [llama.cpp](https://github.com/ggerganov/llama.cpp) 或 [Ollama](https://ollama.ai/)。
-* **提示工程 Prompt engineering**: 常見技術包括零提示詞、少量提示詞、思維鏈與ReAct。它們在更大的模型上工作得更好，但也可以適應較小的模型。
-* **結構化輸出 Structuring outputs**: 許多任務需要結構化的輸出，如嚴格的模板或JSON格式。像 [LMQL](https://lmql.ai/), [Outlines](https://github.com/outlines-dev/outlines), [Guidance](https://github.com/guidance-ai/guidance), 等庫可以用來指導生成並遵循給定的結構。
+    * [Building Systems with the ChatGPT API](https://www.deeplearning.ai/short-courses/building-systems-with-chatgpt/): Deeplearning AI的短課程，有興趣或需要的可以嘗試看看。
+    * [How Business Thinkers Can Start Building AI Plugins With Semantic Kernel](https://www.deeplearning.ai/short-courses/microsoft-semantic-kernel/): Deeplearning AI的短課程，使用的是微軟的技術棧跟雲端，有興趣或需要的可以嘗試看看。
+    * [LangChain for LLM Application Development](https://www.deeplearning.ai/short-courses/langchain-for-llm-application-development/) : Deeplearning AI的短課程，這個比較偏入門級的，使用的是LangChain 的技術棧。
+    * [Functions, Tools and Agents with LangChain](https://www.deeplearning.ai/short-courses/langchain-for-llm-application-development/) : Deeplearning AI的短課程，這個稍微深入，使用的是LangChain 的技術棧，並能學會使用函數,代理Agent以集相關的工具。
 
-📚 **參考資料**:
-* [Run an LLM locally with LM Studio](https://www.kdnuggets.com/run-an-llm-locally-with-lm-studio) by Nisha Arya: 關於如何使用LM Studio的簡短指南。
-* [Prompt engineering guide](https://www.promptingguide.ai/) by DAIR.AI: 帶有示例的提示技術的詳盡列表。
-* [Outlines - Quickstart](https://outlines-dev.github.io/outlines/quickstart/): Outlines啟用的指導生成技術的列表。
-* [LMQL - Overview](https://lmql.ai/docs/language/overview.html): 對LMQL語言的介紹。
+* **開源 LLMs**: [Hugging Face Hub](https://huggingface.co/models) 是尋找LLMs的好地方。 您可以直接在 [Hugging Face Spaces](https://huggingface.co/spaces)中運行一些模型， 或者下載並在像 [LM Studio](https://lmstudio.ai/) 這樣的應用程序中本地運行以及通過CLI使用 [llama.cpp](https://github.com/ggerganov/llama.cpp) 或 [Ollama](https://ollama.ai/)。
+    * [Run an LLM locally with LM Studio](https://www.kdnuggets.com/run-an-llm-locally-with-lm-studio) by Nisha Arya: 關於如何使用LM Studio的簡短指南。
+    
+* **提示工程 Prompt engineering**: 常見技術包括零提示詞、少量提示詞、思維鏈與ReAct。它們在更大的模型上工作得更好，但也可以適應較小的模型。
+    * [Prompt engineering guide](https://www.promptingguide.ai/) by DAIR.AI: 帶有示例的提示技術的詳盡列表。
+    * [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) : Deeplearning AI的短課程，這個比較偏入門級的。
+
+    
+* **結構化輸出 Structuring outputs**: 許多任務需要結構化的輸出，如嚴格的模板或JSON格式。像 [LMQL](https://lmql.ai/), [Outlines](https://github.com/outlines-dev/outlines), [Guidance](https://github.com/guidance-ai/guidance), 等庫可以用來指導生成並遵循給定的結構。
+    * [Outlines - Quickstart](https://outlines-dev.github.io/outlines/quickstart/): Outlines啟用的指導生成技術的列表。
+    * [LMQL - Overview](https://lmql.ai/docs/language/overview.html): 對LMQL語言的介紹。
 ---
 ### 2. 建立向量儲存
 
 創建向量儲存是建立檢索增強生成（Retrieval Augmented Generation，簡稱RAG）流程的第一步。文件被加載、拆分，並使用相關的片段來產生向量表示（嵌入），這些向量表示將被存儲以便在推理過程中使用。
 
-* **文檔導入 Ingesting documents**: 文檔加載器是方便的包裝器，可以處理多種格式： PDF, JSON, HTML, Markdown, 等。 它們還可以直接從一些數據庫和API（GitHub, Reddit, Google Drive, 等）檢索數據。
+* **文檔導入 Ingesting documents**: 文檔加載器是方便的包裝器，可以處理多種格式： PDF, JSON, HTML, Markdown, 等。 它們還可以直接從一些數據庫和API（GitHub, Reddit, Google Drive, 等）檢索數據。 
 * **文檔拆分 Splitting documents**: 文本拆分器將文檔拆分成較小的、語義上有意義的片段。通常最好不要在n個字符後拆分文本，而是按照標題或遞迴地拆分，並附帶一些額外的元數據。
+    * [LangChain - Text splitters](https://python.langchain.com/docs/modules/data_connection/document_transformers/): LangChain實現的不同文本拆分器列表。
+    * [LangChain: Chat with Your Data](https://www.deeplearning.ai/short-courses/langchain-chat-with-your-data/) :  Deeplearning AI的短課程，使用的是LangChain的技術棧跟雲端，有興趣或需要的可以嘗試看看。  
 * **嵌入模型 Embedding models**: 嵌入模型將文本轉換為向量表示。這允許對語言進行更深入、更細膩的理解，這對於進行語義搜索至關重要。
+    * [Understanding and Applying Text Embeddings](https://www.deeplearning.ai/short-courses/google-cloud-vertex-ai/): 使用google家的產品了解詞向量。
+    * [Sentence Transformers library](https://www.sbert.net/): 流行的嵌入模型庫。
+    * [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard): 嵌入模型的排行榜。
 * **向量數據庫 Vector databases**: 向量數據庫（如 [Chroma](https://www.trychroma.com/), [Pinecone](https://www.pinecone.io/), [Milvus](https://milvus.io/), [FAISS](https://faiss.ai/), [Annoy](https://github.com/spotify/annoy), 等）專為儲存嵌入向量而設計。它們支援基於向量相似性有效檢索與查詢最相似的數據。
-
-📚 ** 參考資料**:
-* [LangChain - Text splitters](https://python.langchain.com/docs/modules/data_connection/document_transformers/): LangChain實現的不同文本拆分器列表。
-* [Sentence Transformers library](https://www.sbert.net/): 流行的嵌入模型庫。
-* [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard): 嵌入模型的排行榜。
-* [The Top 5 Vector Databases](https://www.datacamp.com/blog/the-top-5-vector-databases) by Moez Ali: 最佳和最流行的向量數據庫比較。
+    * [The Top 5 Vector Databases](https://www.datacamp.com/blog/the-top-5-vector-databases) by Moez Ali: 最佳和最流行的向量數據庫比較。
+    * [Vector Databases: from Embeddings to Applications](https://www.deeplearning.ai/short-courses/vector-databases-embeddings-applications/) :  Deeplearning AI的短課程，使用的是Weaviate的技術棧跟雲端，有興趣或需要的可以嘗試看看。
+    * [Building Applications with Vector Databases](https://www.deeplearning.ai/short-courses/vector-databases-embeddings-applications/) :  Deeplearning AI的短課程，使用的是pinecone的技術棧跟雲端，有興趣或需要的可以嘗試看看。
 
 ---
 ### 3. Retrieval Augmented Generation 檢索增強生成
@@ -53,16 +61,16 @@
 借助 RAG，LLMs 可以從資料庫中檢索上下文文檔，以提高答案的準確性。RAG 是一種無需任何微調即可增強模型知識的流行方法。
 
 * **Orchestrators 協作器**: Orchestrators 協作器 (如 [LangChain](https://python.langchain.com/docs/get_started/introduction), [LlamaIndex](https://docs.llamaindex.ai/en/stable/), [FastRAG](https://github.com/IntelLabs/fastRAG), 等）是流行的框架，用於將您的 LLM 與工具、資料庫、記憶體等連接起來並增強他們的能力。
+    * [Llamaindex - High-level concepts](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html): 建造 RAG 管道時需要了解的主要概念。
+    * [Building and Evaluating Advanced RAG Applications](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/): Deeplearning AI 跟 Llamaindex共同推出的短課程。
+    * [Pinecone - Retrieval Augmentation](https://www.pinecone.io/learn/series/langchain/langchain-retrieval-augmentation/): 檢索增強流程概述。
 * **Retrievers 檢索器**: 使用者指令未針對檢索進行最佳化。可以應用不同的技術（例如，多查詢檢索器、 [HyDE](https://arxiv.org/abs/2212.10496), 等）來重新表述/擴展它們並提高效能。
+    * [LangChain - Q&A with RAG](https://python.langchain.com/docs/use_cases/question_answering/quickstart): 建立典型 RAG 管道的逐步教學。
 * **記憶**: 為了記住先前的說明和答案，LLM 和 ChatGPT 等聊天機器人會將此歷史記錄添加到其上下文視窗中。此緩衝區可以透過匯總（例如，使用較小的 LLM）、向量儲存 + RAG 等來改進。
+    * [LangChain - Memory types](https://python.langchain.com/docs/modules/memory/types/): 不同類型記憶體及其相關用途的清單。
 * **評估**: 我們需要評估文件檢索（上下文精確度和召回率）和生成階段（可信度和答案相關性）。可以使用 [Ragas](https://github.com/explodinggradients/ragas/tree/main) 和 [DeepEval](https://github.com/confident-ai/deepeval)工具進行簡化。
-
-📚 **參考資料**:
-* [Llamaindex - High-level concepts](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html): 建造 RAG 管道時需要了解的主要概念。
-* [Pinecone - Retrieval Augmentation](https://www.pinecone.io/learn/series/langchain/langchain-retrieval-augmentation/): 檢索增強流程概述。
-* [LangChain - Q&A with RAG](https://python.langchain.com/docs/use_cases/question_answering/quickstart): 建立典型 RAG 管道的逐步教學。
-* [LangChain - Memory types](https://python.langchain.com/docs/modules/memory/types/): 不同類型記憶體及其相關用途的清單。
-* [RAG pipeline - Metrics](https://docs.ragas.io/en/stable/concepts/metrics/index.html): 用於評估 RAG 管道的主要指標的概述。
+    * [RAG pipeline - Metrics](https://docs.ragas.io/en/stable/concepts/metrics/index.html): 用於評估 RAG 管道的主要指標的概述。
+    
 ---
 ### 4. 進階 RAG
 
