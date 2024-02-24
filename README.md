@@ -354,7 +354,7 @@ NLP 是人工智慧的一個令人著迷的分支，它彌合了人類語言和�
     * [了解啟動感知權重量化](https://medium.com/friendliai/understanding-activation-aware-weight-quantization-awq-boosting-inference-serving-efficiency-in-10bb0faf63a8) by FriendliAI: AWQ技術及其優勢的概述。
 
 📚 **參考文獻**:
-    * [LLM Note Day 14 - 量化 Quantization](https://ithelp.ithome.com.tw/articles/10330372) :筆記式版本的量化介紹。
+* [LLM Note Day 14 - 量化 Quantization](https://ithelp.ithome.com.tw/articles/10330372) :筆記式版本的量化介紹。
 
 ---
 ### 8. 新趨勢
