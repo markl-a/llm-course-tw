@@ -10,6 +10,7 @@
     * [Mixture of Experts Explained](https://huggingface.co/blog/moe) by Hugging Face: 關於MoE及其工作方式的詳盡指南.
 * **多模態模型 Multimodal models**: 這些模型（ [CLIP](https://openai.com/research/clip), [Stable Diffusion](https://stability.ai/stable-image), 或 [LLaVA](https://llava-vl.github.io/)) 處理多種類型的輸入（文本、圖像、音頻等）與統一的嵌入空間，從而解鎖了強大的應用，如文本到圖像。
     * [Large Multimodal Models](https://huyenchip.com/2023/10/10/multimodal.html) by Chip Huyen: 對多模態系統及其近期發展歷史的概述.
+    * [sora可能架構的解析](https://blog.csdn.net/v_JULY_v/article/details/136143475?spm=1000.2115.3001.5927)
 
 📚 **參考文獻**:
  * [模型融合、混合专家、更小的LLM，几篇论文看懂2024年LLM发展方向](https://www.jiqizhixin.com/articles/2024-02-22)：可以參考下，寫得算全面的。
