@@ -4,7 +4,7 @@
 * 簡介跟教學：
     * [用人話講解微調技術](https://www.zhihu.com/zvideo/1723348624463994881)：請只專注技術。
     * [Finetuning Large Language Models](https://www.deeplearning.ai/short-courses/finetuning-large-language-models/): Deeplearning.ai 的微調技術短課程，適合快速入門。
-* **全微調**: 全微調是指訓練模型中的所有參數 ( 就是模型訓練，只是資料量不多 )。這不是一種有效的技術，但它會產生稍微好一點的結果.
+* **全微調**: 全微調是指訓練模型中的所有參數 ( 就是模型訓練，只是資料量不多，並且資料通常是特定任務或子領域上的)。這不是一種有效的技術，但它會產生稍微好一點的結果.
     * [The Novice's LLM Training Guide](https://rentry.org/llm-training) by Alpin: 概述微調 LLM 時要考慮的主要概念和參數.
 * [**LoRA**](https://arxiv.org/abs/2106.09685): 一種基於低階適配器(low-rank adapters)的高效參數微調技術（PEFT）。我們不訓練所有參數，而是只訓練這些適配器(adapters)。
     * [LoRA insights](https://lightning.ai/pages/community/lora-insights/) by Sebastian Raschka: 有關 LoRA 以及如何選擇最佳參數的實用見解.
