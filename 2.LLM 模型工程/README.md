@@ -233,3 +233,4 @@
 
 📚 **參考文獻**:
  * [模型融合、混合专家、更小的LLM，几篇论文看懂2024年LLM发展方向](https://www.jiqizhixin.com/articles/2024-02-22)：可以參考下，寫得算全面的。
+ * [Ten Noteworthy AI Research Papers of 2023](https://magazine.sebastianraschka.com/p/10-ai-research-papers-2023?utm_source=profile&utm_medium=reader2):這篇文章回顧了2023年十篇值得注意的AI研究論文。涵蓋了從大規模訓練運行的洞察、開放基礎和微調聊天模型到量化LLM的高效微調等多個方面。作者強調了這些研究在透明度、方法創新和特定領域應用方面的重要性，並期待未來的研究能夠帶來更多類似的高質量論文。這篇跟上一篇是同一個作者。
