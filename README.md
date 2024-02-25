@@ -5,7 +5,7 @@
     🤗 <a href="https://huggingface.co/mlabonne">原作者的Hugging Face</a> • 
     💻 <a href="https://mlabonne.github.io/blog">原作者的Blog</a> • 
     📙 <a href="https://github.com/PacktPublishing/Hands-On-Graph-Neural-Networks-Using-Python">Hands-on GNN（原作者的Github)</a> • 
-    🗣️ <a href="https://chat.openai.com/g/g-yviLuLqvI-llm-course">Interactive GPT</a>
+    🗣️ <a href="https://chat.openai.com/g/g-yviLuLqvI-llm-course">Interactive GPT（原作者做的GPTS)</a>
   </p>
 </div>
 <br/>
